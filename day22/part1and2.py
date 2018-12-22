@@ -76,9 +76,9 @@ def dijkstra(area, target):
 				addEdge(G, (j, i), (j, i + 1), area)
 			if j + 1 < target[0] + 101:
 				addEdge(G, (j, i), (j + 1, i), area)
-			if i - 1 >= 0: # target[1] + 101:
+			if i - 1 >= 0:
 				addEdge(G, (j, i), (j, i - 1), area)
-			if j - 1 >= 0: # target[0] + 101:
+			if j - 1 >= 0:
 				addEdge(G, (j, i), (j - 1, i), area)
 	
 	return nx.dijkstra_path_length(G, (0,0,1), (target[0], target[1], 1))
